@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo & Media Gallery | Bright Future International School</title>
+  <meta name="description" content="Explore photos and moments of student life, smart classrooms, sports championships, arts festivals, and campus architecture at Bright Future International School.">
+  <meta name="keywords" content="school gallery, campus photos, school events, sports day photos, art exhibition, classroom photos">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader" class="preloader">
+    <div class="loader-crest"><i class="fas fa-graduation-cap"></i></div>
+    <div class="preloader-title">BRIGHT FUTURE INTERNATIONAL SCHOOL</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-announcement">
+        <span class="announcement-badge">Campus Moments</span>
+        <span>Capturing Joy, Discovery, and Achievement Every Day</span>
+      </div>
+      <div class="top-bar-actions">
+        <a href="tel:+1234567890" class="top-contact-item"><i class="fas fa-phone-alt"></i> +1 (800) 555-0199</a>
+        <a href="mailto:info@brightfuture.edu" class="top-contact-item"><i class="fas fa-envelope"></i> info@brightfuture.edu</a>
+        <a href="admissions.html" class="top-apply-btn"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER / NAVBAR ================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bright Future School Homepage">
+        <div class="logo-crest"><i class="fas fa-graduation-cap"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">Bright Future</span>
+          <span class="brand-sub">International School</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="activities.html" class="nav-link">Activities</a>
+        <a href="faculty.html" class="nav-link">Faculty</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html#enquiryForm" class="btn btn-primary btn-sm">
+          <i class="fas fa-calendar-check"></i> Enquire Now
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= PAGE HERO BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-badge badge-white"><i class="fas fa-camera-retro"></i> Visual Moments</div>
+        <h1 class="page-hero-title">Life at Bright Future</h1>
+        <p class="page-hero-description">
+          Experience the daily vitality of our learning spaces, sporting triumphs, artistic exhibitions, and joyful student community.
+        </p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Gallery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY SECTION & FILTER ================= -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge">Visual Exploration</div>
+          <h2 class="section-title">Photo & Activity Highlights</h2>
+          <p class="section-subtitle">Click on any image to view in high resolution with our interactive lightbox viewer.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-container reveal">
+          <button class="filter-btn gallery-filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="campus">Campus & Facilities</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="classrooms">Classrooms & Labs</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="sports">Sports & Athletics</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="events">Events & Festivals</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="activities">Arts & Clubs</button>
+        </div>
+
+        <!-- Gallery Grid (12 Items) -->
+        <div class="gallery-grid">
+          <!-- 1. Campus -->
+          <div class="gallery-item reveal" data-category="campus" data-title="Modern Campus Architecture & Green Grounds">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?q=80&w=900&auto=format&fit=crop" alt="Campus Architecture">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Campus Courtyard</h4>
+            </div>
+          </div>
+
+          <!-- 2. Classrooms -->
+          <div class="gallery-item reveal reveal-delay-1" data-category="classrooms" data-title="Collaborative Smart Classroom Learning">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=900&auto=format&fit=crop" alt="Smart Classroom">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Smart Classrooms</h4>
+            </div>
+          </div>
+
+          <!-- 3. Sports -->
+          <div class="gallery-item reveal reveal-delay-2" data-category="sports" data-title="Annual Football Championship">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=900&auto=format&fit=crop" alt="Football Championship">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Football Championship</h4>
+            </div>
+          </div>
+
+          <!-- 4. Classrooms / Labs -->
+          <div class="gallery-item reveal" data-category="classrooms" data-title="Hands-On Chemistry Laboratory Research">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=900&auto=format&fit=crop" alt="Chemistry Lab">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Science Research Lab</h4>
+            </div>
+          </div>
+
+          <!-- 5. Events -->
+          <div class="gallery-item reveal reveal-delay-1" data-category="events" data-title="Annual Graduation & Recognition Ceremony">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=900&auto=format&fit=crop" alt="Graduation Day">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Graduation Day</h4>
+            </div>
+          </div>
+
+          <!-- 6. Activities / Arts -->
+          <div class="gallery-item reveal reveal-delay-2" data-category="activities" data-title="Fine Arts Painting and Canvas Exhibition">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=900&auto=format&fit=crop" alt="Art Studio">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Fine Art Exhibition</h4>
+            </div>
+          </div>
+
+          <!-- 7. Activities / Robotics -->
+          <div class="gallery-item reveal" data-category="activities" data-title="Robotics Team Rover Building Session">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=900&auto=format&fit=crop" alt="Robotics Workshop">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Robotics Innovation</h4>
+            </div>
+          </div>
+
+          <!-- 8. Sports / Swimming -->
+          <div class="gallery-item reveal reveal-delay-1" data-category="sports" data-title="Indoor Olympic Heated Swimming Complex">
+            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=900&auto=format&fit=crop" alt="Swimming Pool">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Swimming Complex</h4>
+            </div>
+          </div>
+
+          <!-- 9. Campus / Library -->
+          <div class="gallery-item reveal reveal-delay-2" data-category="campus" data-title="Central Library & Silent Study Zones">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=900&auto=format&fit=crop" alt="Central Library">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Central Library</h4>
+            </div>
+          </div>
+
+          <!-- 10. Events / Music Gala -->
+          <div class="gallery-item reveal" data-category="events" data-title="Annual Cultural Orchestra and Music Gala">
+            <img src="https://images.unsplash.com/photo-1469488865564-c2de10f69f96?q=80&w=900&auto=format&fit=crop" alt="Music Gala">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Annual Cultural Gala</h4>
+            </div>
+          </div>
+
+          <!-- 11. Classrooms / Coding -->
+          <div class="gallery-item reveal reveal-delay-1" data-category="classrooms" data-title="Computer Coding & Software Development Lab">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=900&auto=format&fit=crop" alt="Computer Lab">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Computer Lab</h4>
+            </div>
+          </div>
+
+          <!-- 12. Activities / Debate -->
+          <div class="gallery-item reveal reveal-delay-2" data-category="activities" data-title="Model United Nations General Assembly Debate">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=900&auto=format&fit=crop" alt="MUN Debate">
+            <div class="gallery-hover-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+              <h4>Model United Nations</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-banner-grid">
+            <div>
+              <div class="section-badge badge-accent">Experience in Person</div>
+              <h2 class="cta-title">Want to See Our Campus Yourself?</h2>
+              <p class="cta-text">Nothing compares to walking through our sunlit halls and meeting our faculty. Schedule a guided tour today.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-accent btn-lg"><i class="fas fa-school"></i> Book a Campus Tour</a>
+              <a href="admissions.html" class="btn btn-outline-white btn-lg"><i class="fas fa-file-signature"></i> Apply Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="logo-crest"><i class="fas fa-graduation-cap"></i></div>
+            <div class="brand-text">
+              <span class="brand-name">Bright Future</span>
+              <span class="brand-sub">International School</span>
+            </div>
+          </a>
+          <p class="footer-desc">Empowering curious, creative, and compassionate leaders through premier international education.</p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">School Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+            <li><a href="admissions.html"><i class="fas fa-chevron-right"></i> Admissions</a></li>
+            <li><a href="faculty.html"><i class="fas fa-chevron-right"></i> Faculty Directory</a></li>
+            <li><a href="activities.html"><i class="fas fa-chevron-right"></i> Student Life</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Photo Gallery</a></li>
+            <li><a href="events.html"><i class="fas fa-chevron-right"></i> School Events</a></li>
+            <li><a href="admissions.html#faq"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="contact.html#campusTour"><i class="fas fa-chevron-right"></i> Book Tour</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-location-dot"></i><span>124 Education Boulevard, Global City, Metro 40001</span></li>
+            <li><i class="fas fa-phone"></i><span>+1 (800) 555-0199</span></li>
+            <li><i class="fas fa-envelope"></i><span>admissions@brightfuture.edu</span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Fri: 08:00 AM – 04:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Bright Future International School. All Rights Reserved.</p>
+          <div class="footer-demo-badge"><i class="fas fa-code"></i> Professional Website Demo Template</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Viewer -->
+  <div id="galleryLightbox" class="lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

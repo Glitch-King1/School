@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & School Calendar | Bright Future International School</title>
+  <meta name="description" content="Stay informed about upcoming academic competitions, sports galas, parent-teacher conferences, and cultural festivals at Bright Future International School.">
+  <meta name="keywords" content="school events, academic calendar, sports day, parent teacher meeting, science expo, school news">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    /* Modal Styles for Event Details */
+    .event-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(9, 32, 64, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+      padding: 1.5rem;
+    }
+    .event-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .event-modal-box {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      max-width: 600px;
+      width: 100%;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+    }
+    .event-modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      font-size: 1.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .event-modal-close:hover {
+      color: var(--color-error);
+    }
+    .event-modal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--secondary-light);
+      color: var(--secondary-color);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader" class="preloader">
+    <div class="loader-crest"><i class="fas fa-graduation-cap"></i></div>
+    <div class="preloader-title">BRIGHT FUTURE INTERNATIONAL SCHOOL</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-announcement">
+        <span class="announcement-badge">Event Update</span>
+        <span>Annual Sports Gala Scheduled for March 28, 2026 | Register to Attend</span>
+      </div>
+      <div class="top-bar-actions">
+        <a href="tel:+1234567890" class="top-contact-item"><i class="fas fa-phone-alt"></i> +1 (800) 555-0199</a>
+        <a href="mailto:events@brightfuture.edu" class="top-contact-item"><i class="fas fa-envelope"></i> info@brightfuture.edu</a>
+        <a href="admissions.html" class="top-apply-btn"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER / NAVBAR ================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bright Future School Homepage">
+        <div class="logo-crest"><i class="fas fa-graduation-cap"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">Bright Future</span>
+          <span class="brand-sub">International School</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="activities.html" class="nav-link">Activities</a>
+        <a href="faculty.html" class="nav-link">Faculty</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html#enquiryForm" class="btn btn-primary btn-sm">
+          <i class="fas fa-calendar-check"></i> Enquire Now
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= PAGE HERO BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-badge badge-white"><i class="fas fa-calendar-star"></i> Campus Happenings</div>
+        <h1 class="page-hero-title">School Events & Activities</h1>
+        <p class="page-hero-description">
+          Stay connected with our community celebrations, academic symposia, sports fixtures, and parent-teacher collaboration forums.
+        </p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Events</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENTS SECTION & FILTER ================= -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge">Calendar 2026</div>
+          <h2 class="section-title">Upcoming School Events</h2>
+          <p class="section-subtitle">Filter by category to view fixtures and activities relevant to your child.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-container reveal">
+          <button class="filter-btn event-filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn event-filter-btn" data-filter="academic">Academic & STEM</button>
+          <button class="filter-btn event-filter-btn" data-filter="sports">Sports & Athletics</button>
+          <button class="filter-btn event-filter-btn" data-filter="cultural">Cultural & Arts</button>
+          <button class="filter-btn event-filter-btn" data-filter="parents">Parents & Community</button>
+        </div>
+
+        <!-- Events Grid (6 Events) -->
+        <div class="events-grid">
+          <!-- 1. Sports Day -->
+          <div class="event-card reveal" data-category="sports" data-full-date="March 28, 2026" data-time="08:30 AM - 03:00 PM" data-location="Main Sports Stadium">
+            <div class="event-card-media">
+              <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop" alt="Annual Sports Meet">
+              <div class="event-date-badge">
+                <span class="event-date-day">28</span>
+                <span class="event-date-month">Mar</span>
+              </div>
+            </div>
+            <div class="event-card-body">
+              <span class="event-category-tag">Sports & Athletics</span>
+              <h3 class="event-title">Annual Inter-House Sports Gala</h3>
+              <p class="event-desc">A thrilling athletic spectacle featuring track & field races, inter-house relays, and medal award ceremonies.</p>
+              <div class="event-meta-info">
+                <span><i class="far fa-clock"></i> 8:30 AM - 3:00 PM</span>
+                <span><i class="fas fa-location-dot"></i> Sports Complex</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-event-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- 2. Science Expo -->
+          <div class="event-card reveal reveal-delay-1" data-category="academic" data-full-date="April 12, 2026" data-time="10:00 AM - 04:00 PM" data-location="STEM Innovation Center">
+            <div class="event-card-media">
+              <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?q=80&w=800&auto=format&fit=crop" alt="Science & Tech Expo">
+              <div class="event-date-badge">
+                <span class="event-date-day">12</span>
+                <span class="event-date-month">Apr</span>
+              </div>
+            </div>
+            <div class="event-card-body">
+              <span class="event-category-tag">Academics & STEM</span>
+              <h3 class="event-title">Young Innovators Science Expo</h3>
+              <p class="event-desc">Student-built robotics projects, renewable energy models, and live interactive STEM experiments open to all families.</p>
+              <div class="event-meta-info">
+                <span><i class="far fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                <span><i class="fas fa-location-dot"></i> STEM Wing</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-event-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- 3. Cultural Fest -->
+          <div class="event-card reveal reveal-delay-2" data-category="cultural" data-full-date="May 05, 2026" data-time="05:30 PM - 08:30 PM" data-location="Grand School Auditorium">
+            <div class="event-card-media">
+              <img src="https://images.unsplash.com/photo-1469488865564-c2de10f69f96?q=80&w=800&auto=format&fit=crop" alt="Annual Cultural Fest">
+              <div class="event-date-badge">
+                <span class="event-date-day">05</span>
+                <span class="event-date-month">May</span>
+              </div>
+            </div>
+            <div class="event-card-body">
+              <span class="event-category-tag">Cultural & Arts</span>
+              <h3 class="event-title">Colors of World Music & Drama Fest</h3>
+              <p class="event-desc">An evening of theatrical drama, choir orchestra, and international cultural performances by students.</p>
+              <div class="event-meta-info">
+                <span><i class="far fa-clock"></i> 5:30 PM - 8:30 PM</span>
+                <span><i class="fas fa-location-dot"></i> Auditorium</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-event-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- 4. PTM -->
+          <div class="event-card reveal" data-category="parents" data-full-date="May 20, 2026" data-time="09:00 AM - 01:00 PM" data-location="Academic Classrooms">
+            <div class="event-card-media">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" alt="Parent Teacher Meeting">
+              <div class="event-date-badge">
+                <span class="event-date-day">20</span>
+                <span class="event-date-month">May</span>
+              </div>
+            </div>
+            <div class="event-card-body">
+              <span class="event-category-tag">Parents & Community</span>
+              <h3 class="event-title">Term 2 Parent-Teacher Conference</h3>
+              <p class="event-desc">One-on-one progress review between parents and subject educators to discuss personalized learning milestones.</p>
+              <div class="event-meta-info">
+                <span><i class="far fa-clock"></i> 9:00 AM - 1:00 PM</span>
+                <span><i class="fas fa-location-dot"></i> Respective Homerooms</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-event-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- 5. Debate Championship -->
+          <div class="event-card reveal reveal-delay-1" data-category="academic" data-full-date="June 10, 2026" data-time="11:00 AM - 05:00 PM" data-location="Conference Hall A">
+            <div class="event-card-media">
+              <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=800&auto=format&fit=crop" alt="Inter-School Debate">
+              <div class="event-date-badge">
+                <span class="event-date-day">10</span>
+                <span class="event-date-month">Jun</span>
+              </div>
+            </div>
+            <div class="event-card-body">
+              <span class="event-category-tag">Academics & Oratory</span>
+              <h3 class="event-title">National Inter-School Debate Tournament</h3>
+              <p class="event-desc">Over 20 regional schools gather for a parliamentary debate championship on global sustainability and AI ethics.</p>
+              <div class="event-meta-info">
+                <span><i class="far fa-clock"></i> 11:00 AM - 5:00 PM</span>
+                <span><i class="fas fa-location-dot"></i> Conference Hall</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-event-details">View Details</button>
+            </div>
+          </div>
+
+          <!-- 6. Swimming Gala -->
+          <div class="event-card reveal reveal-delay-2" data-category="sports" data-full-date="June 25, 2026" data-time="09:00 AM - 02:00 PM" data-location="Aquatics Center">
+            <div class="event-card-media">
+              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop" alt="Aquatics Swimming Gala">
+              <div class="event-date-badge">
+                <span class="event-date-day">25</span>
+                <span class="event-date-month">Jun</span>
+              </div>
+            </div>
+            <div class="event-card-body">
+              <span class="event-category-tag">Sports & Aquatics</span>
+              <h3 class="event-title">Junior & Senior Aquatics Gala</h3>
+              <p class="event-desc">Freestyle, butterfly, and relay swimming championships held in our indoor Olympic-standard pool.</p>
+              <div class="event-meta-info">
+                <span><i class="far fa-clock"></i> 9:00 AM - 2:00 PM</span>
+                <span><i class="fas fa-location-dot"></i> Aquatics Center</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-event-details">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-banner-grid">
+            <div>
+              <div class="section-badge badge-accent">Stay Updated</div>
+              <h2 class="cta-title">Subscribe to the School Newsletter</h2>
+              <p class="cta-text">Receive monthly updates on academic schedules, exam dates, sports fixtures, and guest speaker events.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-accent btn-lg"><i class="fas fa-bell"></i> Subscribe for Updates</a>
+              <a href="admissions.html" class="btn btn-outline-white btn-lg"><i class="fas fa-file-signature"></i> Apply Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= EVENT DETAILS MODAL ================= -->
+  <div id="eventDetailsModal" class="event-modal" aria-modal="true" role="dialog">
+    <div class="event-modal-box">
+      <span class="event-modal-close" id="modalEventClose">&times;</span>
+      <span class="event-modal-badge"><i class="fas fa-calendar-check"></i> Event Details</span>
+      <h3 id="modalEventTitle" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-dark);">Event Title</h3>
+      
+      <div style="background: var(--color-surface-subtle); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; font-size: 0.9rem;">
+        <div style="margin-bottom: 0.4rem;"><strong><i class="far fa-calendar" style="color: var(--secondary-color); width: 20px;"></i> Date:</strong> <span id="modalEventDate">March 28, 2026</span></div>
+        <div style="margin-bottom: 0.4rem;"><strong><i class="far fa-clock" style="color: var(--secondary-color); width: 20px;"></i> Time:</strong> <span id="modalEventTime">08:30 AM - 03:00 PM</span></div>
+        <div><strong><i class="fas fa-location-dot" style="color: var(--secondary-color); width: 20px;"></i> Location:</strong> <span id="modalEventLocation">Main Sports Stadium</span></div>
+      </div>
+
+      <p id="modalEventDesc" style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">Event description will appear here.</p>
+      
+      <div style="display: flex; gap: 1rem;">
+        <a href="contact.html" class="btn btn-primary btn-sm" style="flex: 1;"><i class="fas fa-id-badge"></i> Register to Attend</a>
+        <button class="btn btn-outline btn-sm" onclick="document.getElementById('eventDetailsModal').classList.remove('active'); document.body.style.overflow='';">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="logo-crest"><i class="fas fa-graduation-cap"></i></div>
+            <div class="brand-text">
+              <span class="brand-name">Bright Future</span>
+              <span class="brand-sub">International School</span>
+            </div>
+          </a>
+          <p class="footer-desc">Empowering curious, creative, and compassionate leaders through premier international education.</p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">School Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+            <li><a href="admissions.html"><i class="fas fa-chevron-right"></i> Admissions</a></li>
+            <li><a href="faculty.html"><i class="fas fa-chevron-right"></i> Faculty Directory</a></li>
+            <li><a href="activities.html"><i class="fas fa-chevron-right"></i> Student Life</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Photo Gallery</a></li>
+            <li><a href="events.html"><i class="fas fa-chevron-right"></i> School Events</a></li>
+            <li><a href="admissions.html#faq"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="contact.html#campusTour"><i class="fas fa-chevron-right"></i> Book Tour</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-location-dot"></i><span>124 Education Boulevard, Global City, Metro 40001</span></li>
+            <li><i class="fas fa-phone"></i><span>+1 (800) 555-0199</span></li>
+            <li><i class="fas fa-envelope"></i><span>admissions@brightfuture.edu</span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Fri: 08:00 AM – 04:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Bright Future International School. All Rights Reserved.</p>
+          <div class="footer-demo-badge"><i class="fas fa-code"></i> Professional Website Demo Template</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

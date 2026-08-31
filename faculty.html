@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty & Leadership | Bright Future International School</title>
+  <meta name="description" content="Meet our experienced, certified international educators and visionary academic leaders dedicated to inspiring curiosity and character in every child.">
+  <meta name="keywords" content="school faculty, teachers directory, international educators, principal, academic leadership">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader" class="preloader">
+    <div class="loader-crest"><i class="fas fa-graduation-cap"></i></div>
+    <div class="preloader-title">BRIGHT FUTURE INTERNATIONAL SCHOOL</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-announcement">
+        <span class="announcement-badge">Faculty Excellence</span>
+        <span>80+ Certified Master Educators with Average 10+ Years Teaching Experience</span>
+      </div>
+      <div class="top-bar-actions">
+        <a href="tel:+1234567890" class="top-contact-item"><i class="fas fa-phone-alt"></i> +1 (800) 555-0199</a>
+        <a href="mailto:faculty@brightfuture.edu" class="top-contact-item"><i class="fas fa-envelope"></i> info@brightfuture.edu</a>
+        <a href="admissions.html" class="top-apply-btn"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER / NAVBAR ================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Bright Future School Homepage">
+        <div class="logo-crest"><i class="fas fa-graduation-cap"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">Bright Future</span>
+          <span class="brand-sub">International School</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="activities.html" class="nav-link">Activities</a>
+        <a href="faculty.html" class="nav-link active">Faculty</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html#enquiryForm" class="btn btn-primary btn-sm">
+          <i class="fas fa-calendar-check"></i> Enquire Now
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= PAGE HERO BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-badge badge-white"><i class="fas fa-chalkboard-user"></i> Our Educators</div>
+        <h1 class="page-hero-title">Passionate Mentors & Visionaries</h1>
+        <p class="page-hero-description">
+          Our international faculty comprises distinguished educators, researchers, artists, and coaches dedicated to nurturing the individual potential of every student.
+        </p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Faculty</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FACULTY DIRECTORY & FILTERS ================= -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge">Meet The Team</div>
+          <h2 class="section-title">Faculty & Academic Directory</h2>
+          <p class="section-subtitle">Filter by department to explore our qualified teaching faculty across all grades.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-container reveal">
+          <button class="filter-btn faculty-filter-btn active" data-filter="all">All Faculty</button>
+          <button class="filter-btn faculty-filter-btn" data-filter="leadership">Leadership</button>
+          <button class="filter-btn faculty-filter-btn" data-filter="primary">Primary School</button>
+          <button class="filter-btn faculty-filter-btn" data-filter="middle">Middle School</button>
+          <button class="filter-btn faculty-filter-btn" data-filter="senior">Senior School</button>
+        </div>
+
+        <!-- Faculty Cards Grid -->
+        <div class="faculty-grid">
+          <!-- 1. Principal -->
+          <div class="faculty-card reveal" data-category="leadership">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Dr. Eleanor Vance">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Dr. Eleanor Vance</h3>
+              <div class="faculty-role">Principal & Head of School</div>
+              <p class="faculty-desc">Ph.D. in Educational Leadership from Oxford. 22+ years heading premier international academies worldwide.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Vice Principal -->
+          <div class="faculty-card reveal reveal-delay-1" data-category="leadership">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="Marcus Sterling">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Marcus Sterling, M.Ed.</h3>
+              <div class="faculty-role">Vice Principal & Dean of Academics</div>
+              <p class="faculty-desc">Master of Education, Harvard University. Specialist in international curricula, STEM integration, and student welfare.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Senior Math -->
+          <div class="faculty-card reveal reveal-delay-2" data-category="senior">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=600&auto=format&fit=crop" alt="Dr. Priya Sharma">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Dr. Priya Sharma</h3>
+              <div class="faculty-role">Head of Mathematics (Grades 9–12)</div>
+              <p class="faculty-desc">Ph.D. in Applied Mathematics. National Math Olympiad mentor and author of secondary calculus resources.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Senior Physics -->
+          <div class="faculty-card reveal reveal-delay-3" data-category="senior">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Claire Dupont">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Claire Dupont, M.Sc.</h3>
+              <div class="faculty-role">Senior Physics & Robotics Lead</div>
+              <p class="faculty-desc">12 years teaching advanced laboratory physics. Mentored student teams to victory in national robotics championships.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Middle Science -->
+          <div class="faculty-card reveal" data-category="middle">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Arthur Reynolds">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Arthur Reynolds, B.Ed.</h3>
+              <div class="faculty-role">Middle School Science Coordinator</div>
+              <p class="faculty-desc">Inquiry-based biology specialist creating dynamic classroom lab experiments that make complex sciences intuitive.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Middle English & Debate -->
+          <div class="faculty-card reveal reveal-delay-1" data-category="middle">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Sarah Lin">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Sarah Lin, M.A.</h3>
+              <div class="faculty-role">English Literature & Debate Coach</div>
+              <p class="faculty-desc">Master's in Comparative Literature. Dedicated to fostering critical analysis, public speaking, and creative writing.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Primary Lead -->
+          <div class="faculty-card reveal reveal-delay-2" data-category="primary">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop" alt="Rachel Green">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Rachel Green, B.Ed.</h3>
+              <div class="faculty-role">Primary Section Head (Grades 1–3)</div>
+              <p class="faculty-desc">Child development specialist focusing on foundational phonics, early numeracy, and positive social dynamics.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Primary STEM -->
+          <div class="faculty-card reveal reveal-delay-3" data-category="primary">
+            <div class="faculty-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Daniel Gomez">
+            </div>
+            <div class="faculty-card-body">
+              <h3 class="faculty-name">Daniel Gomez</h3>
+              <div class="faculty-role">Primary Technology & Coding Educator</div>
+              <p class="faculty-desc">Pioneer in introducing playful block coding, visual algorithms, and digital storytelling to elementary students.</p>
+              <div class="faculty-socials">
+                <a href="#" class="faculty-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-banner-grid">
+            <div>
+              <div class="section-badge badge-accent">Meet Our Teachers</div>
+              <h2 class="cta-title">Interact with Our Educators</h2>
+              <p class="cta-text">Book an appointment or attend our upcoming Open House to converse directly with our teaching department.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-accent btn-lg"><i class="fas fa-calendar-check"></i> Book an Interaction</a>
+              <a href="admissions.html" class="btn btn-outline-white btn-lg"><i class="fas fa-file-signature"></i> Apply for 2026</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="logo-crest"><i class="fas fa-graduation-cap"></i></div>
+            <div class="brand-text">
+              <span class="brand-name">Bright Future</span>
+              <span class="brand-sub">International School</span>
+            </div>
+          </a>
+          <p class="footer-desc">Empowering curious, creative, and compassionate leaders through premier international education.</p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">School Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+            <li><a href="admissions.html"><i class="fas fa-chevron-right"></i> Admissions</a></li>
+            <li><a href="faculty.html"><i class="fas fa-chevron-right"></i> Faculty Directory</a></li>
+            <li><a href="activities.html"><i class="fas fa-chevron-right"></i> Student Life</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Photo Gallery</a></li>
+            <li><a href="events.html"><i class="fas fa-chevron-right"></i> School Events</a></li>
+            <li><a href="admissions.html#faq"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="contact.html#campusTour"><i class="fas fa-chevron-right"></i> Book Tour</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-location-dot"></i><span>124 Education Boulevard, Global City, Metro 40001</span></li>
+            <li><i class="fas fa-phone"></i><span>+1 (800) 555-0199</span></li>
+            <li><i class="fas fa-envelope"></i><span>admissions@brightfuture.edu</span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Fri: 08:00 AM – 04:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Bright Future International School. All Rights Reserved.</p>
+          <div class="footer-demo-badge"><i class="fas fa-code"></i> Professional Website Demo Template</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/faculty.js"></script>
+</body>
+</html>
